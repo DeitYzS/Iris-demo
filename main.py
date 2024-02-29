@@ -6,8 +6,8 @@ import streamlit as st
 warnings.filterwarnings("ignore")
 from PIL import Image
 
-model = open("model_iris.pkl", "rb")
-classifier = pickle.load(model)
+# model = open("model_iris.pkl", "rb")
+classifier = pickle(open("model_iris.pkl", "rb"))
 
 def predict_iris_variety(sepal_length,sepal_width,petal_length,petal_width):
     prediction = classifier.predict([[sepal_length,sepal_width,petal_length,petal_width]])
